@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Label x:Name="label" Content="Ad :" Margin="10,10,434,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Soyad:" Margin="10,41,434,0" VerticalAlignment="Top" RenderTransformOrigin="1.329,2.312"/>
+        <TextBox x:Name="txt_Ad" HorizontalAlignment="Left" Height="23" Margin="88,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding ElementName=tb1,Path=SelectedItem.AD}"/>
+        <TextBox x:Name="txt_Soyad" HorizontalAlignment="Left" Height="23" Margin="88,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding ElementName=tb1,Path=SelectedItem.SOYAD}"/>
+        <DataGrid x:Name="tb1" Grid.Column="0" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" Height="171" Width="279">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="AD" Width="*" Binding="{Binding AD}" />
+                <DataGridTextColumn Header="SOYAD" Width="*" Binding="{Binding SOYAD}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button" Content="Kişiyi Ekle" HorizontalAlignment="Left" Margin="214,113,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="304,15,0,0" VerticalAlignment="Top" Width="135" Height="34"/>
+
     </Grid>
 </Window>
